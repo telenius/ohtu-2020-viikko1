@@ -65,4 +65,31 @@ public class VarastoTest {
         assertEquals(4, varasto.paljonkoMahtuu(), vertailuTarkkuus);
     }
 
+    @Test
+    public void yritetaanOttaaEnemmanKuinOn() {
+        varasto.lisaaVarastoon(8);
+
+        double saatuMaara = varasto.otaVarastosta(10);
+
+        assertEquals(8, saatuMaara, vertailuTarkkuus);
+    }
+    
+    @Test
+    public void yritetaanOttaaEnemmanKuinOnMenikoMiinukselle() {
+        varasto.lisaaVarastoon(8);
+
+        varasto.otaVarastosta(10);
+
+        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void yritetaanLaittaaEnemmanKuinMahtuu() {
+        varasto.lisaaVarastoon(8);
+        
+        varasto.lisaaVarastoon(3);
+
+        assertEquals(10, varasto.getSaldo(), vertailuTarkkuus);
+    }
+    
 }

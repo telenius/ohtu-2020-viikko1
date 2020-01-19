@@ -56,7 +56,7 @@ public class VarastoTest {
 
     @Test
     public void konstruktoriLuoLiiantaydenKustomiVaraston() {
-        assertEquals(20, kustomoituLiiantaysiVarasto.getSaldo(), vertailuTarkkuus);
+        assertEquals(-20, kustomoituLiiantaysiVarasto.getSaldo(), vertailuTarkkuus);
     }
 
     @Test

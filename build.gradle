@@ -36,10 +36,11 @@ mainClassName = 'main.Main'
 // Jar package generation
 jar {
     manifest {
-        attributes 'Main-Class': 'main.Main'
+        attributes ('Main-Class': 'main.Main',
         classDirectories = files(classDirectories.files.collect {
             fileTree(dir: it)
         })
+        )
     }
 }
 

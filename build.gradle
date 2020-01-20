@@ -40,7 +40,6 @@ jar {
         "Class-Path": configurations.compile.collect { it.getName() }.join(' '))
         }
     }
-}
 
 // Generating reports
 jacocoTestReport {

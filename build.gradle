@@ -37,6 +37,9 @@ mainClassName = 'main.Main'
 jar {
     manifest {
         attributes 'Main-Class': 'main.Main'
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it)
+        })
     }
 }
 

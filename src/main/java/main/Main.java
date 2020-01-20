@@ -1,4 +1,5 @@
 package main;
+import ohtu.ohtuvarasto.*;
 
 public class Main {
 

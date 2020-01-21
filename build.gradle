@@ -48,11 +48,9 @@ jacocoTestReport {
         html.enabled true
     }
     afterEvaluate {
-        "Class-Path" = configurations.compile.collect {
-            fileTree.join(' ') {
-                 dir: it,
-                 exclude: ['main/**'])
-            }
-        }
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it,
+                    exclude: ['main/**'])
+        })
     }
 }

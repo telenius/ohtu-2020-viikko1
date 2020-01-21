@@ -47,4 +47,12 @@ jacocoTestReport {
         xml.enabled true
         html.enabled true
     }
+    afterEvaluate {
+        "Class-Path" = configurations.compile.collect {
+            fileTree.join(' ') {
+                 dir: it,
+                 exclude: ['main/**'])
+            }
+        }
+    }
 }

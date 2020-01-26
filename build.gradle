@@ -24,10 +24,12 @@ repositories {
 
 dependencies {
     // This dependency is found on compile classpath of this component and consumers.
-    compile 'com.google.guava:guava:20.0'
+    //compile 'com.google.guava:guava:20.0'
+    implementation 'com.google.guava:guava:20.0'
 
     // Use JUnit test framework
-    testCompile 'junit:junit:4.12'
+    //testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 }
 
 // Define the main class for the application
@@ -36,8 +38,7 @@ mainClassName = 'main.Main'
 // Jar package generation
 jar {
     manifest {
-        attributes ('Main-Class': 'main.Main',
-        "Class-Path": configurations.compile.collect { it.getName() }.join(' '))
+        attributes ('Main-Class': 'main.Main')
         }
     }
 
@@ -47,10 +48,10 @@ jacocoTestReport {
         xml.enabled true
         html.enabled true
     }
-    afterEvaluate {
-        classDirectories = files(classDirectories.files.collect {
-            fileTree(dir: it,
-                    exclude: ['main/**'])
-        })
-    }
+    //afterEvaluate {
+    //    classDirectories = files(classDirectories.files.collect {
+    //        fileTree(dir: it,
+    //                exclude: ['main/**'])
+    //    })
+    //}
 }

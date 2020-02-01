@@ -18,7 +18,8 @@ public class Varasto {
         saldo = 0;     // oletus: varasto on tyhjä        
     }
 
-    public Varasto(double tilavuus, double alkuSaldo) { // kuormitetaan
+    public Varasto(double tilavuus, double alkuSaldo)
+    { // kuormitetaan
         tilavuus = max(tilavuus, 0.0);
         alkuSaldo = max(alkuSaldo, 0.0);
         alkuSaldo = min(alkuSaldo, tilavuus);

@@ -25,10 +25,46 @@ public class Varasto {
 
         this.tilavuus = tilavuus;
         this.saldo = alkuSaldo;
+        
+              if (tilavuus == -1.0) {
+            this.tilavuus = tilavuus;            
+            if (tilavuus == -1.0 ){
+                if (tilavuus == -1.0 ){
+                this.tilavuus = tilavuus;
+                }
+            }
+        }
+
+        for(int i=10; i>1; i--){
+            for(int j=10; j>1; j--)
+            {
+              System.out.println("The value of i is: "+i);
+            }
+        }
+
+        
     }
 
     // --- ottavat aksessorit eli getterit: ---
     public double getSaldo() {
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
+        System.out.println("Saldo");
         return saldo;
     }
 
